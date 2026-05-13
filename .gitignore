@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+
+# ChromaDB
+data/chroma_db/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Uploaded files
+data/uploads/
+
+# Test
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Benchmark/evaluation output (generated locally)
+benchmark_results.json
+ragas_evaluation_results.json
+chunking_experiment_results.json
+
+# Root pycache
+__pycache__/
