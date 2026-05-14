@@ -1,0 +1,477 @@
+{
+  "timestamp": "2026-05-14T06:06:09.445983",
+  "environment": {
+    "llm_provider": "gemini",
+    "llm_model": "gemini-3.1-flash-lite",
+    "embedding_provider": "ollama",
+    "embedding_model": "bge-m3",
+    "k_retrieval": 10,
+    "relevance_threshold": 1.5
+  },
+  "num_questions": 20,
+  "configs_tested": 4,
+  "best_config": "recursive_small",
+  "results": [
+    {
+      "config": {
+        "name": "recursive_small",
+        "description": "Recursive: 500 chars, 100 overlap",
+        "type": "recursive",
+        "chunk_size": 500,
+        "chunk_overlap": 100
+      },
+      "num_chunks": 657,
+      "num_stored": 657,
+      "avg_chunk_size": 420,
+      "total_questions": 20,
+      "correct": 15,
+      "partial": 4,
+      "incorrect": 1,
+      "not_found": 0,
+      "accuracy": 0.75,
+      "weighted_accuracy": 0.85
+    },
+    {
+      "config": {
+        "name": "recursive_default",
+        "description": "Recursive: 1000 chars, 200 overlap (current default)",
+        "type": "recursive",
+        "chunk_size": 1000,
+        "chunk_overlap": 200
+      },
+      "num_chunks": 348,
+      "num_stored": 348,
+      "avg_chunk_size": 774,
+      "total_questions": 20,
+      "correct": 15,
+      "partial": 4,
+      "incorrect": 1,
+      "not_found": 0,
+      "accuracy": 0.75,
+      "weighted_accuracy": 0.85
+    },
+    {
+      "config": {
+        "name": "recursive_large",
+        "description": "Recursive: 1500 chars, 300 overlap",
+        "type": "recursive",
+        "chunk_size": 1500,
+        "chunk_overlap": 300
+      },
+      "num_chunks": 244,
+      "num_stored": 244,
+      "avg_chunk_size": 1063,
+      "total_questions": 20,
+      "correct": 16,
+      "partial": 2,
+      "incorrect": 1,
+      "not_found": 1,
+      "accuracy": 0.8,
+      "weighted_accuracy": 0.85
+    },
+    {
+      "config": {
+        "name": "semantic",
+        "description": "Semantic chunking (percentile breakpoint)",
+        "type": "semantic",
+        "breakpoint_threshold_type": "percentile"
+      },
+      "num_chunks": 0,
+      "num_stored": 0,
+      "avg_chunk_size": 0,
+      "total_questions": 20,
+      "correct": 0,
+      "partial": 0,
+      "incorrect": 0,
+      "not_found": 20,
+      "accuracy": 0.0,
+      "weighted_accuracy": 0.0,
+      "error": "failed to encode response: json: unsupported value: NaN (status code: 500)"
+    }
+  ],
+  "detailed_results": [
+    {
+      "config": {
+        "name": "recursive_small",
+        "description": "Recursive: 500 chars, 100 overlap",
+        "type": "recursive",
+        "chunk_size": 500,
+        "chunk_overlap": 100
+      },
+      "num_chunks": 657,
+      "num_stored": 657,
+      "avg_chunk_size": 420,
+      "total_questions": 20,
+      "correct": 15,
+      "partial": 4,
+      "incorrect": 1,
+      "not_found": 0,
+      "accuracy": 0.75,
+      "weighted_accuracy": 0.85,
+      "per_question": [
+        {
+          "num": "1",
+          "status": "correct",
+          "score": 0.688
+        },
+        {
+          "num": "2",
+          "status": "correct",
+          "score": 0.8
+        },
+        {
+          "num": "3",
+          "status": "correct",
+          "score": 0.667
+        },
+        {
+          "num": "4",
+          "status": "correct",
+          "score": 0.75
+        },
+        {
+          "num": "5",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "6",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "7",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "8",
+          "status": "partial",
+          "score": 0.5
+        },
+        {
+          "num": "9",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "10",
+          "status": "correct",
+          "score": 0.75
+        },
+        {
+          "num": "11",
+          "status": "partial",
+          "score": 0.5
+        },
+        {
+          "num": "12",
+          "status": "partial",
+          "score": 0.25
+        },
+        {
+          "num": "13",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "14",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "15",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "16",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "17",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "18",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "19",
+          "status": "incorrect",
+          "score": 0.0
+        },
+        {
+          "num": "20",
+          "status": "partial",
+          "score": 0.333
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "recursive_default",
+        "description": "Recursive: 1000 chars, 200 overlap (current default)",
+        "type": "recursive",
+        "chunk_size": 1000,
+        "chunk_overlap": 200
+      },
+      "num_chunks": 348,
+      "num_stored": 348,
+      "avg_chunk_size": 774,
+      "total_questions": 20,
+      "correct": 15,
+      "partial": 4,
+      "incorrect": 1,
+      "not_found": 0,
+      "accuracy": 0.75,
+      "weighted_accuracy": 0.85,
+      "per_question": [
+        {
+          "num": "1",
+          "status": "correct",
+          "score": 0.5
+        },
+        {
+          "num": "2",
+          "status": "correct",
+          "score": 0.8
+        },
+        {
+          "num": "3",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "4",
+          "status": "correct",
+          "score": 0.75
+        },
+        {
+          "num": "5",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "6",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "7",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "8",
+          "status": "correct",
+          "score": 0.833
+        },
+        {
+          "num": "9",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "10",
+          "status": "correct",
+          "score": 0.75
+        },
+        {
+          "num": "11",
+          "status": "partial",
+          "score": 0.5
+        },
+        {
+          "num": "12",
+          "status": "partial",
+          "score": 0.25
+        },
+        {
+          "num": "13",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "14",
+          "status": "partial",
+          "score": 0.5
+        },
+        {
+          "num": "15",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "16",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "17",
+          "status": "partial",
+          "score": 0.4
+        },
+        {
+          "num": "18",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "19",
+          "status": "incorrect",
+          "score": 0.0
+        },
+        {
+          "num": "20",
+          "status": "correct",
+          "score": 0.667
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "recursive_large",
+        "description": "Recursive: 1500 chars, 300 overlap",
+        "type": "recursive",
+        "chunk_size": 1500,
+        "chunk_overlap": 300
+      },
+      "num_chunks": 244,
+      "num_stored": 244,
+      "avg_chunk_size": 1063,
+      "total_questions": 20,
+      "correct": 16,
+      "partial": 2,
+      "incorrect": 1,
+      "not_found": 1,
+      "accuracy": 0.8,
+      "weighted_accuracy": 0.85,
+      "per_question": [
+        {
+          "num": "1",
+          "status": "correct",
+          "score": 0.625
+        },
+        {
+          "num": "2",
+          "status": "correct",
+          "score": 0.8
+        },
+        {
+          "num": "3",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "4",
+          "status": "correct",
+          "score": 0.75
+        },
+        {
+          "num": "5",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "6",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "7",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "8",
+          "status": "not_found",
+          "score": 0.0
+        },
+        {
+          "num": "9",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "10",
+          "status": "correct",
+          "score": 0.75
+        },
+        {
+          "num": "11",
+          "status": "partial",
+          "score": 0.5
+        },
+        {
+          "num": "12",
+          "status": "partial",
+          "score": 0.25
+        },
+        {
+          "num": "13",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "14",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "15",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "16",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "17",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "18",
+          "status": "correct",
+          "score": 1.0
+        },
+        {
+          "num": "19",
+          "status": "incorrect",
+          "score": 0.0
+        },
+        {
+          "num": "20",
+          "status": "correct",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "config": {
+        "name": "semantic",
+        "description": "Semantic chunking (percentile breakpoint)",
+        "type": "semantic",
+        "breakpoint_threshold_type": "percentile"
+      },
+      "num_chunks": 0,
+      "num_stored": 0,
+      "avg_chunk_size": 0,
+      "total_questions": 20,
+      "correct": 0,
+      "partial": 0,
+      "incorrect": 0,
+      "not_found": 20,
+      "accuracy": 0.0,
+      "weighted_accuracy": 0.0,
+      "per_question": [],
+      "error": "failed to encode response: json: unsupported value: NaN (status code: 500)"
+    }
+  ]
+}
